@@ -1,0 +1,58 @@
+html, body{
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+p, td, li{
+    line-height: 1.6!important;
+}
+
+h2, h3{
+    margin-left: -6px;
+}
+
+td{
+    word-break: break-all;
+}
+
+code{
+    padding: 2px 0;
+    background-color: rgba(0,0,0,0.06);
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    
+    &:before,
+    &:after{
+        letter-spacing: -0.2em;
+        content: "\00a0";
+    }
+}
+
+.document{
+	.ui.list .item {
+		padding-left: 24px;
+		line-height: 1.6;
+	}
+	
+	pre>code {
+		background-color: #ffffdd!important;
+		line-height: 1.6;
+		
+		&:before,
+        &:after{
+            letter-spacing: initial;
+            content: "";
+        }
+	}
+	
+	#content {
+		-ms-user-select: text;
+		-webkit-user-select: text;
+		-moz-user-select: text;
+		min-height: 300px;
+	}
+	
+	#content > h3 + div{
+		padding-bottom: 32px;
+	}
+}

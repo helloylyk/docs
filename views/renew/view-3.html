@@ -1,0 +1,68 @@
+<meta charset="utf-8" />
+<h2>预订</h2>
+
+<h3>需求</h3>
+<ol class="ui list">
+	<li>倒计时第7天（11月1日）至倒计时第1天（11月7日）之间使用，用户在此期间可以先支付<span class="ui mini blue label"><i class="rmb icon"></i>27.00</span>进行预订。</li>
+	<li>若预订成功，在<span class="ui label">11月8日20点</span>至<span class="ui tiny label">11月9日20点</span>期间，根据所选套餐支付剩余金额即可。</li>
+	<li>页面中实时显示剩余名额。</li>
+	<li>预订成功后进行短信提醒，具体参见目录【消息通知】一章。</li>
+	<li>7天中，需要对每天预订人数进行限制，并记录抢完所用时间（如：昨日预订名额在23分13秒内抢完）。具体如下表：</li>
+	<table class="ui center aligned celled table">
+		<thead>
+			<tr>
+				<th>日期</th>
+				<th>限量名额</th>
+				<th>抢完用时</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>倒计时7天</td>
+				<td>200人</td>
+				<td>记录真实值</td>
+			</tr>
+			<tr>
+				<td>倒计时6天</td>
+				<td>300人</td>
+				<td>记录真实值</td>
+			</tr>
+			<tr>
+				<td>倒计时5天</td>
+				<td>500人</td>
+				<td>记录真实值</td>
+			</tr>
+			<tr>
+				<td>倒计时4天</td>
+				<td>500人</td>
+				<td>记录500人时用时，不限制人数</td>
+			</tr>
+			<tr>
+				<td>倒计时3天</td>
+				<td>500人</td>
+				<td>记录500人时用时，不限制人数</td>
+			</tr>
+			<tr>
+				<td>倒计时2天</td>
+				<td>500人</td>
+				<td>记录500人时用时，不限制人数</td>
+			</tr>
+			<tr>
+				<td>倒计时1天</td>
+				<td>500人</td>
+				<td>记录500人时用时，不限制人数</td>
+			</tr>
+			<tr>
+				<td>倒计时0天</td>
+				<td colspan="2">不可预订</td>
+			</tr>
+		</tbody>
+	</table>
+</ol>
+<h3>原型</h3>
+<ul class="ui list">
+	<li>界面原型图如下：</li>
+	<a href="img/prototype/reserve.png" target="_blank">
+		<img class="ui bordered image" src="img/prototype/reserve.png" />
+	</a>
+</ul>

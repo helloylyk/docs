@@ -1,0 +1,223 @@
+<meta charset="utf-8" />
+<h2>商品体系体系</h2>
+<h3>概述</h3>
+<ol class="ui list">
+	<li>包括商品列表、订单列表两个部分；</li>
+	<li>商品类型包括【激活码】、【会员资格】、【优惠券】以及【实体商品】四种；</li>
+	<li>pending...</li>
+</ol>
+
+<h3>商品列表</h3>
+<h4>描述</h4>
+<ol class="ui list">
+	<li>商品列表中包括商品的增删改查操作；</li>
+</ol>
+
+<h4>添加</h4>
+<ol class="ui list">
+	<li>在页面中弹出modal，让操作人员选择商品类型，若选择【实体商品】则进入新页面进行编辑；若选择其他三种，则再弹出下一个modal输入相关信息；</li>
+	<li>添加时所需的具体信息请到下方各类型商品相应小节查看；</li>
+</ol>
+
+<h4>查看</h4>
+<ol class="ui list">列表的形式查看所有商品（点击每行进入该行商品的详情页），包括以下内容：
+	<li>复选框：用于选择后进行批量操作（如：批量上架）；</li>
+	<li>编号：商品id；</li>
+	<li>商品名：图片+文字；</li>
+	<li>商品类型：此商品所属的商品类型（如：激活码）；</li>
+	<li>上架状态：用户只能查看到已上架的商品；</li>
+	<li>价格：单位是<mark>优币<mark>或者</mark>人民币</mark>；</li>
+	<li>库存：该商品目前剩余的库存量；</li>
+	<li>操作：上架/下架、编辑、预览（弹出二维码在手机上查看）、删除（弹出提示框确认）；</li>
+	<li>列表底部可以全选本页所有商品，对已选的商品进行批量上架操作。右侧放置翻页按钮及当前页码/总页码；</li>
+</ol>
+
+<h4>筛选&搜索商品</h4>
+<ol class="ui list">
+	<li>筛选：根据商品类型、上架状态进行复合筛选；</li>
+	<li>搜索：根据商品id或者关键字进行搜索；</li>
+</ol>
+
+<h4>删除</h4>
+<ol class="ui list">
+	<li>只可以对“未上架”的商品进行此操作。若商品状态为“已上架”，则提示需要先下架再删除；</li>
+	<li>点击删除按钮后弹出提示框，内容为：“确定要删除该商品吗？此操作不可恢复”，按钮为“确认删除”和“取消”；</li>
+</ol>
+
+<h4>编辑</h4>
+<ol class="ui list">
+	<li>编辑时可以修改是否推荐此商品；</li>
+	<li>其他添加时填写的信息均可修改，具体信息请到下方相应小节查看；</li>
+</ol>
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【商品列表】界面原型图如下：
+		<a href="img/prototype/admin/goods/goods-list.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/goods/goods-list.png" />
+		</a>
+	</li>
+	<li>【新增商品 选择类型&激活码等】界面原型图如下：
+		<a href="img/prototype/admin/goods/goods-add.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/goods/goods-add.png" />
+		</a>
+	</li>
+	<li>【新增商品(实体商品)】界面原型图如下：
+		<a href="img/prototype/admin/goods/goods-new.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/goods/goods-new.png" />
+		</a>
+	</li>
+</ol>
+
+
+<h3>激活码</h3>
+<h4>描述</h4>
+<ol class="ui list">
+	<li>用户成为友邻优课会员的渠道除在App中直接购买外，还可能在淘宝或其他微信公众号购买激活码，在App内输入激活码进行激活；</li>
+	<li>目前已定的渠道有：淘宝网（店铺名：友邻优课的伙伴们）、微信公众号（友邻优课会员号）以及小答应申请发放；</li>
+	<li>在友邻优课公众号用户可以购买激活码，并送给好友。支付后自动生成激活码；</li>
+</ol>
+
+<h4>查看</h4>
+<ol class="ui list">查看激活码主要包括以下内容：
+	<li>统计数据：</li>激活码总数、已激活数、已售出数；
+	<li>序号；</li>
+	<li>激活码；</li>
+	<li>分发渠道：此激活码用于哪个渠道；</li>
+	<li>使用状态：未激活和已激活三种；</li>
+	<li>类型：即激活码的使用期限；</li>
+	<li>到期时间：状态为已激活的激活码此项显示为激活时间+类型对应期限；未激活的激活码此项为空；</li>
+	<li>申请人：添加此激活码的管理员；</li>
+	<li>操作：删除（仅状态为“未售出”的激活码有此操作）；</li>
+</ol>
+
+<h4>增加</h4>
+<ol class="ui list">
+	<li>弹出遮罩层；</li>
+	<li style="color:red">渠道：单项选择，选项为【微信公众号】、【淘宝店铺】、【礼品卡】（持续更新）；</li>
+	<li>数量：用户输入，只能是数字；</li>
+	<li>类别：单项选择，选项为：1天、3天、7天、1个月（30天）、6个月、1年、2年；</li>
+</ol>
+
+<h4>搜索和筛选</h4>
+<ol class="ui list">
+	<li>搜索：输入激活码搜索，查看其使用状态等信息；</li>
+	<li>筛选：根据到期时间、分发渠道、使用状态、申请人筛选激活码。筛选条件可以选择以上4各数据的并集；</li>
+</ol>
+
+<h4>删除</h4>
+<ol class="ui list">
+	<li>只可以删除状态为“未售出”的激活码；</li>
+	<li>删除前提示用户“删除后无法恢复，请再次确认”；</li>
+</ol>
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【激活码】界面原型图如下：
+		<a href="img/prototype/admin/code.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/code.png" />
+		</a>
+	</li>
+</ol>
+
+<h3>实体商品</h3>
+<h4>增加</h4>
+<ol class="ui list">增加实体商品需要填写以下信息：
+	<li>商品名称：最多8个字；</li>
+	<li>商品价格：单位为优币，提示操作人员“优币与人民币的汇率约等于20:1”；</li>
+	<li>限购数量：每个用户限制购买的数量，不限制填写-1；</li>
+	<li>库存数量：有多少库存；</li>
+	<li>初始售出数量：上架时默认有多少人已经购买了此商品；</li>
+	<li>商品简介：html代码（支持使用友邻优课公共样式库）；</li>
+</ol>
+
+<h4>查看</h4>
+<ol class="ui list">查看实体商品主要包括以下内容：
+	<li>pending...</li>
+</ol>
+
+<h4>编辑</h4>
+<ol class="ui list">编辑实体商品主要包括以下内容：
+	<li>pending...</li>
+</ol>
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>pending...</li>
+</ol>
+
+<h3>订单列表</h3>
+<h4>描述</h4>
+<ol class="ui list">
+	<li>用户购买物品后即生成订单，运营人员对已支付的订单进行发货处理。订单无增减操作；</li>
+	<li></li>
+</ol>
+
+<h4>查看</h4>
+<ol class="ui list">列表的形式查看所有订单，点击后弹出modal显示详情，列表包括以下内容：
+	<li>编号：商品id；</li>
+	<li>商品名：图片+文字；</li>
+	<li>商品类型：此商品所属的商品类型（如：激活码）；</li>
+	<li>订单状态：分为【未支付】、【已支付】、【已发货】、【已收货】四种状态；</li>
+	<li>购买用户：显示用户名，点击后进入改用户信息页面；</li>
+	<li>实收款：单位是<mark>优币<mark>或者</mark>人民币</mark>；</li>
+	<li>数量：用户的购买量；</li>
+	<li>购买时间：该订单生成的时间，具体到分钟；</li>
+	<li>操作：【发货】（已支付状态）、【查看物流】（已发货状态，已收货或虚拟物品则显示为不可点击样式）；</li>
+	<li>列表右下角放置分页按钮及当前页码/总页码；</li>
+</ol>
+
+<h4>搜索和筛选</h4>
+<ol class="ui list">
+	<li>搜索：输入订单号搜索指定订单；</li>
+	<li>筛选：根据商品类型、订单状态进行复合筛选；</li>
+</ol>
+
+<h4>发货</h4>
+<ol class="ui list">编辑实体商品主要包括以下内容：
+	<li>若商品无需物流发货，则购买后自动变为已发货状态；</li>
+	<li>若商品需要物流发货，则点击“发货”按钮后提示运营人员该用户的收寄地址，并要求运营人员选择快递公司、输入订单号；</li>
+</ol>
+
+<h4>查看物流</h4>
+<ol class="ui list">点击后弹出对话框显示该订单的物流信息<mark>(若商品为虚拟物品，此按钮不可点击)</mark>，包括以下内容：
+	<li>收货信息：收货人的姓名、电话、地址；</li>
+	<li>快递信息：物流公司、快递单号；</li>
+	<li>物流信息：根据单号获取并显示该商品的具体物流信息；</li>
+</ol>
+
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【订单列表】界面原型图如下：
+		<a href="img/prototype/admin/goods/trade-list.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/goods/trade-list.png" />
+		</a>
+	</li>
+	<li>【订单发货】界面原型图如下：
+		<a href="img/prototype/admin/goods/trade-consign.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/goods/trade-consign.png" />
+		</a>
+	</li>
+	<li>【查看物流】界面原型图如下：
+		<a href="img/prototype/admin/goods/trade-logistical.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/goods/trade-logistical.png" />
+		</a>
+	</li>
+</ol>
+
+<h3>订单详情</h3>
+<h4>描述</h4>
+<ol class="ui list">
+	<li>订单详情中在列表内容基础上增加：经销商、经销商分成、订单来源3项内容（日后会继续增加）；</li>
+	<li>在列表页面弹出modal显示即可；</li>
+	<li>底部按钮同列表中“操作”列的按钮显示规则；</li>
+</ol>
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【订单详情】界面原型图如下：
+		<a href="img/prototype/admin/goods/trade-detail.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/goods/trade-detail.png" />
+		</a>
+	</li>
+</ol>

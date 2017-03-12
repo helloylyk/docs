@@ -1,0 +1,109 @@
+<meta charset="utf-8" />
+<h2>优课商城体系</h2>
+
+<h3>概述</h3>
+<ol class="ui list">
+	<li>友邻优课微信端（服务号）优课商城目前为友邻优课旗下“优课”的唯一报名付费渠道，主要有品牌介绍、课程介绍、报名支付三个功能；</li>
+	<li>由于微信小程序即将上线，未来将根据需求，为子品牌开发以【听课】功能为主的微信小程序，暂不在服务号内提供听课功能；</li>
+</ol>
+
+<h3>课程列表</h3>
+<h4>描述</h4>
+<p>所有课程按照品牌分类，用户选定品牌后只显示该品牌下的课程，默认为【夏说英文】；</p>
+
+<h4>页面元素</h4>
+<ol class="ui list">
+		<li>Banner图：点击后到指定页面，后台设定链接地址，可能是课程介绍、品牌介绍、运营活动页面、图文消息等；</li>
+		<li>会员状态栏：
+			<ol>
+				<li>若用户是友邻学员，显示：“您是尊贵的友邻学员，部分课程可享受折扣”；</li>
+				<li>若用户不是友邻学员，显示：“您还未成为友邻学员，点此加入即可享受折扣”；</li>
+			</ol>
+		</li>
+		<li>品牌列表：左右滑动切换，给当前选中的品牌logo加boxshadow突出显示。目前只放3个品牌：【夏说英文】、【塔课学院】、【孤独的阅读者】（按此顺序），点击品牌logo区域后进入品牌介绍页面；</li>
+		<li id="course-list-element">课程列表：
+			<ol>
+				<li>若列表为空，在页面中间显示“该品牌还没有优课，敬请期待！”；</li>
+				<li>根据品牌显示该品牌的优课，点击后进入课程详情页；</li>
+				<li>课程列表中的元素包括：课程头图、课程名称、价格（若会员显示原价）、授课教师（若有多名教师，显示第一名教师名字+“等”字+人数，如：“夏鹏等3人”）、上课方式、已报名人数；</li>
+			</ol>
+		</li>
+</ol>
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【课程列表】界面原型图如下：
+		<a href="img/prototype/wechat/course-list.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/course-list.png" />
+		</a>
+	</li>
+</ol>
+
+<h3>品牌介绍</h3>
+<h4>页面元素</h4>
+<ol class="ui list">
+		<li>品牌头图：图片比例为16:9，下方加透明度75%的遮罩，左对齐显示品牌名；</li>
+		<li>品牌介绍：品牌介绍的内容用户可以自定义，但以下两项内容一定存在；
+			<ol>
+				<li>品牌介绍：图文，介绍品牌情况、适合人群等信息；</li>
+				<li>旗下名师：卡片形式（加box-shadow），内容包括教师头像、名称及详细介绍；若有多名老师，左右滑动显示（屏幕内居中显示一名老师即可）；</li>
+			</ol>
+		<li>旗下课程：显示课程信息，元素见<a style="cursor:pointer" onclick="javascript:document.getElementById('course-list-element').scrollIntoView()">课程列表</a>中相应内容，点击后进入课程详情页；</li>
+</ol>
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【品牌介绍】界面原型图如下（小标题前的icon删掉）：
+		<a href="img/prototype/wechat/brand-info.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/brand-info.png" />
+		</a>
+	</li>
+</ol>
+
+<h3>课程详情</h3>
+<h4>页面元素</h4>
+<ol class="ui list">
+	<li>课程头图：图片比例为16:9；</li>
+	<li>课程名：加粗、居中显示全部文字；</li>
+	<li>价格：若用户为友邻学员且该课程有折扣，显示折后价格及原价（划掉）；</li>
+	<li>课程介绍：课程介绍的内容用户可以自定义，但以下两项内容一定存在；
+		<ol>
+			<li>课程内容：图文，介绍课程内容；</li>
+			<li>授课名师：卡片形式（加box-shadow），内容包括教师头像、名称及一句话介绍；</li>
+			<li>上课方式：图文，用户如何上课；</li>
+		</ol>
+	</li>
+	<li>底部固定栏：
+		<ol>
+			<li>咨询管家：点击后弹出遮罩层，显示管家二维码（即自己的小答应，若为老用户，文字提示：“请联系您通讯录中的阿树老师或小答应”）；</li>
+			<li>立即购买：点击后弹出支付框，支付成功后到支付成功页面；</li>
+		</ol>
+	</li>
+</ol>
+
+<h4>支付成功</h4>
+<ol class="ui list">
+	<li>以小答应（用户自己的小答应，若老用户则显示默认头像）对话的方式逐条显示；</li>
+	<li>第一条：“来自【地点】的【姓名】，恭喜您已成功购买来自【品牌名】的<span style="color:#fecd40">《课程名》</span>（黄色），我是你的课程管家：【小答应微信名】”</li>
+	<li>第二条：“我的微信号是：【小答应微信号】，你可以扫描下方二维码加我为微信好友，有问题可以随时向我咨询~”；</li>
+</ol>
+
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【课程详情】界面原型图如下：
+		<a href="img/prototype/wechat/course-info.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/course-info.png" />
+		</a>
+	</li>
+	<li>【咨询管家】界面原型图如下：
+		<a href="img/prototype/wechat/course-info-qrcode.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/course-info-qrcode.png" />
+		</a>
+	</li>
+	<li>【支付成功】界面原型图如下：
+		<a href="img/prototype/wechat/course-purchase-success.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/course-purchase-success.png" />
+		</a>
+	</li>
+</ol>
