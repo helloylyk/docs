@@ -10407,6 +10407,7 @@ img.ui.image {
 .ui.bordered.image svg,
 img.ui.bordered.image {
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left:50px;
 }
 
 /*--------------
