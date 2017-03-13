@@ -3,7 +3,7 @@
 <h3>概述</h3>
 <p>　　知识模块类似于图书馆的索引，用户可以按照专辑（专题）-节目的方式找到已更新的所有节目。</p>
 <h3>流程图</h3>
-	<img class="ui bordered image" style="border:0px" src="img/prototype/app2.0/knowledge/knowledge-flow.png" />
+	<img class="ui app image" style="border:0px" src="img/prototype/app2.0/knowledge/knowledge-flow.png" />
 <h3>知识页</h3>
 
 <p>　　知识页包含专题、每日新闻和专辑三个栏目。右上角播放按钮，点击跳转到正在播放的节目，如用户第一次登陆，则不显示播放按钮。</p>
@@ -19,7 +19,7 @@
 <p></p>
 <p>　　PS1：知识页需要做缓存处理，使用户在无网络情况下也能够浏览缓存中的专辑图片。</p>
 <p>　　PS2：需要后台加入字段，用来区分已闭合和未闭合的节目。</p>
-	<img class="ui bordered image" style="max-height: 667px" src="img/prototype/app2.0/knowledge/knowledge.jpg" />
+	<img class="ui app image" style="max-height: 667px" src="img/prototype/app2.0/knowledge/knowledge.jpg" />
 
 <h3>专辑详情</h3>
 <ol>
@@ -29,7 +29,7 @@
 </ol>
 
 <p>　　若用户为非会员，则在专辑页面底部固定显示<b>立即报名</b>及<b>咨询阿树老师</b>按钮，且播放按钮变为锁。</b>点击立即报名跳转到<b>购买页</b>,点击咨询阿树老师跳转到客服页面。</p>
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/joinnow.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/joinnow.jpg" />
 
 <h3>|　简介</h3>
 <p>　　简介包含三个部分：</p>
@@ -39,7 +39,7 @@
 	<li>专辑的详细介绍，富文本格式</li>
 </ol>
 <p>　　专辑封面上显示：专辑的更新频次、已收听的人数、专辑的点赞人数。</p>
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/albumintro.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/albumintro.jpg" />
 <h3>|　节目</h3>
 
 <p>　　上滑节目列表，则分页栏固定于顶部。</p>
@@ -54,7 +54,7 @@
 <p>　　标记已点过的课程和未点过的课程。已点过的节目记录于服务器，避免用户重装或换手机后无法知道之前听过的节目。</p>
 <p>　　<b>上拉时分页栏固定于顶部。上拉加载时显示加载动画</b>，一次加载15个节目。无网络时，提示“网络不可用”。</p>
 
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/albumlesson.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/albumlesson.jpg" />
 <h4>【筛选】</h4>
 <p>　　每个节目包含一种标签，用来区分不同的节目。</p>
 <p>　　点击筛选时出现筛选菜单，筛选变为“取消”：</p>
@@ -85,13 +85,13 @@
 	<li>显示已选择下载多少节目“已选择xxx条”</li>
 	<li>若用户未勾选任何节目点击下载，提示“请选择要下载的节目”。</li>
 </ol>
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/download.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/download.jpg" />
 
 
 <h3>|　心得</h3>
 <p>　　该分页显示运营人员从该专辑下的心得中挑选的心得。（需要相应的后台功能，可将用户心得添加为精选心得，并管理这些心得）</p>
 <p>　　若该分页下无心得，则隐藏该分页。</p>
-	<img class="ui bordered image" style="max-height: 667px" src="img/prototype/app2.0/knowledge/albumnote.jpg" />
+	<img class="ui app image" style="max-height: 667px" src="img/prototype/app2.0/knowledge/albumnote.jpg" />
 <h3>下载管理</h3>
 <p>　　下载管理包含3个分页：节目、专辑和下载中。打开下载管理默认切换到节目分页。</p>
 <p>　　每个分页均显示手机的总存储空间，以及剩余可用空间。例如：总空间25.8G，剩余2.1G。</p>
@@ -100,8 +100,8 @@
 <p>　　<b>节目</b>分页显示所有已下载的节目，按照下载完成的时间倒序排列。无任何节目时显示默认的空白页。</p>
 <p>　　每个已下载的节目显示如下信息：节目封面、节目名、所属专辑、节目时长。</p>
 <div style="float:left;margin-right:50px;">
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/dlesson1.jpg" /></div>
-<img class="ui bordered image" src="img/prototype/app2.0/knowledge/dlesson2.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/dlesson1.jpg" /></div>
+<img class="ui app image" src="img/prototype/app2.0/knowledge/dlesson2.jpg" />
 <h4>【删除】</h4>
 <p>　　点击【删除】则删除该节目。</p>
 <h4>【批量管理】</h4>
@@ -115,14 +115,14 @@
 <p>　　专辑分页将节目按照专辑分类。点击专辑进入该专辑下已下载的全部节目。</p>
 <h4>【删除】</h4>
 <p>　　点击<b>删除</b>提示“确定删除该专辑的所有节目吗”，确定则删除该专辑，以及该专辑下下载的所有节目。</p>
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/dalbum.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/dalbum.jpg" />
 <b>专辑的下载详情</b>
 
 
 
 <p>　　显示该专辑下的所有已下载节目，按照专辑-节目列表的默认顺序排列。点击专辑可跳转到专辑详情。</p>
 <p>　　批量管理功能与<b>节目</b>分页基本相同。若用户将专辑下下载的的节目全部删除，则返回上级页面，该专辑消失。</p>
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/ddetail.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/ddetail.jpg" />
 <h3>|　下载中</h3>
 
 
@@ -140,4 +140,4 @@
 <p>　　点击 全部暂停 暂停所有任务。</p>
 <h4>清空</h4>
 <p>　　点击清空提示“是否要清空所有下载任务？” 取消 确定。点确定则清空下载中列表，显示默认空白页。</p>
-	<img class="ui bordered image" src="img/prototype/app2.0/knowledge/downloading.jpg" />
+	<img class="ui app image" src="img/prototype/app2.0/knowledge/downloading.jpg" />

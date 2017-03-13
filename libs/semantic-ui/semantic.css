@@ -10411,6 +10411,11 @@ img.ui.bordered.image {
   max-height: 500px;
 }
 
+img.ui.app.image {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left:50px;
+  max-height: 500px;
+}
 /*--------------
     Circular
 ---------------*/
