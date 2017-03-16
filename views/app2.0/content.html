@@ -1,7 +1,9 @@
 <meta charset="utf-8" />
 <div class="ui stackable two column grid container document">
-	<div class="four wide column">
-		<div class="ui accordion" style="position:fixed">
+
+	<div class="four wide column" >
+		<div style="overflow:hidden;width:200px;position:fixed;">
+		<div id="hhh" class="ui accordion" style="overflow-y:scroll; max-width:200%;width:300px">
 			<div class="title" data-id="1"><i class="dropdown icon"></i>概述</div>
 			<div class="content">
 				<div class="ui list">
@@ -30,13 +32,13 @@
 					<a class="item">每日学习时长</a>
 				</div>
 			</div>
-			
-			<div class="title" data-id="4"><i class="dropdown icon"></i>知识模块</div>
+
+			<div class="title" data-id="4"><i class="dropdown icon"></i>课程模块</div>
 			<div class="content">
 				<div class="ui list">
 					<a class="item">概述</a>
 					<a class="item">流程图</a>
-					<a class="item">知识页</a>
+					<a class="item">课程页</a>
 					<a class="item">专辑详情</a>
 					<a class="item">|　简介</a>
 					<a class="item">|　节目</a>
@@ -71,7 +73,7 @@
 					<a class="item">我的心得</a>
 					<a class="item">学习管家</a>
 					<a class="item">设置</a>
-					
+
 				</div>
 			</div>
 			<div class="title" data-id="7"><i class="dropdown icon"></i>播放模块</div>
@@ -89,10 +91,10 @@
 					<a class="item">写心得</a>
 					<a class="item">图片预览</a>
 					<a class="item">选择图片</a>
-					
+
 				</div>
 			</div>
-			
+
 			<div class="title" data-id="8"><i class="dropdown icon"></i>搜索模块</div>
 			<div class="content">
 				<div class="ui list">
@@ -111,7 +113,7 @@
 					<a class="item">学习轨迹</a>
 				</div>
 			</div>
-			
+
 			<div class="title" data-id="10"><i class="dropdown icon"></i>同学资料模块</div>
 			<div class="content">
 				<div class="ui list">
@@ -129,7 +131,6 @@
 					<a class="item">新手引导</a>
 					<a class="item">上拉加载动画</a>
 					<a class="item">数据加载动画</a>
-					<a class="item">提醒样式</a>
 					<a class="item">Bug记录</a>
 					<a class="item">数据记录</a>
 				</div>
@@ -137,30 +138,31 @@
 			<div class="title" data-id="12"><i class="dropdown icon"></i>提示文案</div>
 			<div class="content">
 				<div class="ui list">
-				<a class="item">网络问题</a>
-				<a class="item">微信登录</a>
-				<a class="item">手机登录</a>
-				<a class="item">绑定手机</a>
-				<a class="item">上传图片</a>
-				<a class="item">个人资料</a>
-				<a class="item">加好友</a>
-				<a class="item">专辑详情</a>
-				<a class="item">下载管理</a>
-				<a class="item">我的心得</a>
-				<a class="item">播放页</a>
-				<a class="item">写心得</a>
-				<a class="item">其他提示</a>
+					<a class="item">网络问题</a>
+					<a class="item">微信登录</a>
+					<a class="item">手机登录</a>
+					<a class="item">绑定手机</a>
+					<a class="item">上传图片</a>
+					<a class="item">个人资料</a>
+					<a class="item">加好友</a>
+					<a class="item">专辑详情</a>
+					<a class="item">下载管理</a>
+					<a class="item">我的心得</a>
+					<a class="item">播放页</a>
+					<a class="item">写心得</a>
+					<a class="item">其他提示</a>
 				</div>
 			</div>
 			<div class="title" data-id="13"><i class="dropdown icon"></i>附录</div>
 			<div class="content">
 				<div class="ui list">
-				<a class="item">空白页文案</a>
-				<a class="item">金句</a>
-				<a class="item">网络问题解决方案</a>
-				
+					<a class="item">空白页文案</a>
+					<a class="item">金句</a>
+					<a class="item">网络问题解决方案</a>
+
 				</div>
 			</div>
+		</div>	
 		</div>
 	</div>
 	<div id="content" class="twelve wide column ui form">
@@ -174,10 +176,28 @@
 			$('.show_image img').attr('src', src)
 			$('.ui.modal').modal({
 				className: {
-					scrolling : 'scrolling',
+					scrolling: 'scrolling',
 				},
 				observeChanges: true
 			}).modal('show');
 		});
 	});
+</script>
+<script type="text/javascript">
+
+autodivheight();
+function autodivheight(){
+
+    var winHeight=0;
+    if (window.innerHeight)
+        winHeight = window.innerHeight;
+    else if ((document.body) && (document.body.clientHeight))
+        winHeight = document.body.clientHeight;
+
+    if (document.documentElement && document.documentElement.clientHeight)
+        winHeight = document.documentElement.clientHeight;
+    document.getElementById("hhh").style.height= (winHeight-70)+"px";
+}
+window.onresize=autodivheight;
+
 </script>
