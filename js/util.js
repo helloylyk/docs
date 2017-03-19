@@ -26,10 +26,7 @@ function loadDocument(view, callback){
 			var self = $(titles[i - 1]);
 			var tagId = self.attr('data-id');
 			var items = self.next('.content').find('.ui.list > .item');
-			var sb=self[0].innerHTML.split("</i>",2);
-			hhh[i]=String(i)+"-"+sb[1];
 			for (var j = 1; j <= items.length; j++) {
-				
 				items[j - 1].href = '#' + tagId + '_' + j;
 			}
 		}
@@ -73,7 +70,7 @@ function loadDocument(view, callback){
 			t.addClass('active');
 			
 			var content = $('#content');
-			content.html('').addClass('loading').load('views/' + view + '/' + hhh[viewId] + '.html', function() {
+			content.html('').addClass('loading').load('views/' + view + '/view-' + viewId + '.html', function() {
 				// 代码着色
 				$('pre code').each(function(i, block) {
 					hljs.highlightBlock(block);
