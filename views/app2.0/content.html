@@ -23,7 +23,7 @@
 					<a class="item">用户协议</a>
 				</div>
 			</div>
-			<div class="title" data-id="3"><i class="dropdown icon"></i>首页模块</div>
+			<div class="title" data-id="3"><i class="dropdown icon"></i>今天模块</div>
 			<div class="content">
 				<div class="ui list">
 					<a class="item">概述</a>
@@ -169,35 +169,30 @@
 	</div>
 </div>
 
-<script>
-	loadDocument('app2.0', function() {
-		$('.ui.app.image').click(function() {
-			var src = $(this).context.src;
-			$('.show_image img').attr('src', src)
-			$('.ui.modal').modal({
-				className: {
-					scrolling: 'scrolling',
-				},
-				observeChanges: true
-			}).modal('show');
-		});
+<script>loadDocument('app2.0', function() {
+	$('.ui.app.image').click(function() {
+		var src = $(this).context.src;
+		$('.show_image img').attr('src', src)
+		$('.ui.modal').modal({
+			className: {
+				scrolling: 'scrolling',
+			},
+			observeChanges: true
+		}).modal('show');
 	});
-</script>
-<script type="text/javascript">
+});</script>
+<script type="text/javascript">autodivheight();
 
-autodivheight();
-function autodivheight(){
+function autodivheight() {
 
-    var winHeight=0;
-    if (window.innerHeight)
-        winHeight = window.innerHeight;
-    else if ((document.body) && (document.body.clientHeight))
-        winHeight = document.body.clientHeight;
+	var winHeight = 0;
+	if(window.innerHeight)
+		winHeight = window.innerHeight;
+	else if((document.body) && (document.body.clientHeight))
+		winHeight = document.body.clientHeight;
 
-    if (document.documentElement && document.documentElement.clientHeight)
-        winHeight = document.documentElement.clientHeight;
-    document.getElementById("hhh").style.height= (winHeight-70)+"px";
+	if(document.documentElement && document.documentElement.clientHeight)
+		winHeight = document.documentElement.clientHeight;
+	document.getElementById("hhh").style.height = (winHeight - 70) + "px";
 }
-window.onresize=autodivheight;
-
-</script>
+window.onresize = autodivheight;</script>
