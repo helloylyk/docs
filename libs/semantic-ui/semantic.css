@@ -10414,7 +10414,7 @@ img.ui.bordered.image {
 
 img.ui.app.image {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-left:50px;
+  margin-left:30px;
   max-height: 500px;
   max-width: 500px;
 }
