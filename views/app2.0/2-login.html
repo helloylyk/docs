@@ -1,14 +1,23 @@
 <meta charset="utf-8" />
+<style>
+	p{
+    text-indent:2em; 
+}
+</style>
 <h2>登录模块</h2>
 <h3>概述</h3>
-<p>　　用户可通过手机登录和微信登录两种方式登录app，登陆后根据账户身份可体验更多的App功能，</p>
+<p>用户可通过手机登录和微信登录两种方式登录app，登陆后根据账户身份可体验更多的App功能，</p>
 <h3>登陆流程</h3>
 	<img class="ui app image" src="img/prototype/app2.0/flow/firstflow.png" />
 
 <h3>微信登录</h3>
-<p>　　登录页选择【微信登录】，若已安装并登录微信，则跳转到微信</p>
-<p>　　登陆失败文案：“取消授权” "无法唤起微信客户端"</p>
-	<img class="ui app image" src="img/prototype/app2.0/login/login.png" />
+<ul>
+	<li>登录页选择【微信登录】，若已安装并登录微信，则跳转到微信授权页面。</li>
+	<li>登陆失败文案：“取消授权” "无法唤起微信客户端"</li>
+	<li>登录成功后，如账号为会员，且未绑定手机号。则强制绑定手机号（关闭再打开app扔提示绑定手机号）。</li>
+</ul>
+
+	<img class="ui app image" src="img/prototype/app2.0/login/login.jpg" />
 
 <h3>手机登录</h3>
 <ol>
@@ -36,4 +45,4 @@
 </ol>
 
 <h3>用户协议</h3>
-<p>　　跳转网页。</p>
+<p>跳转网页。</p>
