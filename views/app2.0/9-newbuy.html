@@ -1,0 +1,177 @@
+<meta charset="UTF-8">
+<style>
+	img{
+		height:500px!important;
+	}
+</style>
+<h2>新课程体系</h2>
+<h3>概述</h3>
+<p>友邻优课在2017年5月战略方向调整后对课程进行了重新梳理，新体系将英语学习从口语发音的基本功到英语自由划分为9个部分，帮助英语学习者通过品读世界经典素材（图书、新闻、诗歌等）真正提升英语能力，实现英语自由。</p>
+<h3>购买流程</h3>
+<img class="ui app image" style="height: 300px!important;" src="img/prototype/app2.0/buyflow.png" />
+<h3>购买入口</h3>
+<table class="ui center aligned celled table">
+	<thead>
+		<tr>
+			<th class="one wide">入口</th>
+			<th class="one wide">跳转页面</th>
+			<th class="one wide">谁能看到</th>
+			<th class="four wide">备注</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>非会员【立即入学】按钮</td>
+			<td>
+				<a href="javascript:a('9_4');">介绍页</a>
+			</td>
+			<td>非会员</td>
+			<td>非学员点击课程及其他需要会员资格的地方，提示alert按钮【立即入学】、【咨询阿树老师】、【取消】。点击【立即入学】跳转介绍页。</td>
+		</tr>
+		<tr>
+			<td>课程页banner</td>
+			<td>
+				<a href="javascript:a('9_4');">介绍页</a>
+			</td>
+			<td>非会员</td>
+			<td>该banner仅对非会员展示。</td>
+		</tr>
+		<tr>
+			<td>专辑页【立即报名】</td>
+			<td>
+				<a href="javascript:a('9_5');">选择套餐页</a>
+			</td>
+			<td>非会员</td>
+			<td>对于非会员，所有专辑页底部均固定显示【咨询阿树老师】&【立即报名按钮】按钮。如是会员，则不显示。</td>
+		</tr>
+		<tr>
+			<td>同学权益页【立即升级】</td>
+			<td>
+				<a href="javascript:a('9_6');">支付页</a>
+			</td>
+			<td>会员</td>
+			<td>会员无需购买基础课程版，点击【立即升级】跳转到终身会员版。如用户已是终身会员，则隐藏【立即升级】按钮。</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>介绍页</h3>
+<ol>
+	<li>介绍页分为<b>简介</b>和<b>课程</b>两个分页，默认打开简介页。</li>
+	<li>介绍页底部固定显示【咨询】和【立即报名】两个按钮。
+		<ul>
+			<li>【咨询】：点击跳转到<b>网易七鱼</b>。</li>
+			<li>【立即报名】：点击跳转到<b>选择套餐</b>。</li>
+		</ul>
+	</li>
+</ol>
+<div style="float:left;margin-right:50px;">
+	<img class="ui app image" src="img/prototype/app2.0/newbuy/introduce1.jpg" /></div>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/introduce2.jpg" />
+
+<h4>简介</h4>
+<p>简介页面主要为图片展示，点击部分图片可播放视频。</p>
+<h4>课程</h4>
+<p>课程页展示tree课程体系。</p>
+<ol>
+	<li>试听：点击则跳转到播放页，播放固定课程。
+		<table class="ui center aligned celled structured table">
+			<thead>
+				<tr>
+					<th class="one wide">课程名</th>
+					<th class="one wide">id</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>\</th>
+					<th>\</th>
+				</tr>
+				
+			</tbody>
+		</table>
+	</li>
+	<li>专辑：点击跳转到对应的专辑详情页面。</li>
+	<li>老师头像：点击跳转到对应的老师介绍页。</li>
+</ol>
+<h3>选择套餐</h3>
+<ol>
+	<li>套餐分为<b>基础课程版</b>和<b>终身学习版</b>，<b style="color: red;">跳转该页面始终默认打开终身学习版（重要）</b>。</li>
+	<li>【立即开通】：固定显示于选择套餐页底部，点击跳转到已选择套餐的<b>支付页</b></li>
+</ol>
+<table class="ui center aligned celled table">
+	<thead>
+		<tr>
+			<th></th>
+			<th>能力进阶版</th>
+			<th>终身学习版</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>权益</td>
+		<td>体验版权益+友邻金融分期特权</td>
+		<td>基础课程版权益+外媒新闻每日解读+终身学习者专属课+终身学习者专属社群+终身学习者专属讲义+线下活动优先参与权+专人规划师+好友礼品卡价值¥1790</td>
+	</tr>
+
+</table>
+<p>点击权益则弹窗显示权益的具体内容。</p>
+<h4>基础课程版</h4>
+
+	<p>若用户是<b>未购买终身学习版的会员</b>，则当其选择基础课程版时，提示alert<mark>您无需购买能力进阶课程，推荐您升级为友邻优课终身学习者。</mark> <mark>立即升级</mark>。</p>
+
+<h4>终身学习版</h4>
+
+	<p>当会员选择终身学习版并点击【立即开通】时，提示文案如下：<br />
+		<mark>亲爱的友邻同学：<br />未来我们将举办升级活动。根据您在友邻优课的学习情况估算，您有机会获得一定金额的代金券。请联系您通讯录中的阿树老师或小答应了解详情。<br /><b>我是土豪，拒绝优惠</b></mark><mark><b>去咨询阿树老师</b><br /></mark>
+		<ul>
+			<li>【我是土豪，拒绝优惠】:点击跳转到对应套餐的支付页。</li>
+			<li>【去咨询阿树老师】：点击跳转到微信。</li>
+		</ul>
+	</p>
+<div style="float:left;margin-right:50px;">
+	<img class="ui app image" src="img/prototype/app2.0/newbuy/zhongshen.jpg" /></div>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/jichu.jpg" />
+
+
+<h3>支付页</h3>
+<p>支付页显示要购买的套餐信息。同时选择收货地址和支付方式。</p>
+
+<h4>选择地址</h4>
+<p>地址cell需显示的地址信息包括：<b>收货人</b>、<b>联系电话</b>、<b>地址</b>（由地区和详细地址拼接得到）</p>
+<ol>
+
+	<li>用户已有地址，并选择了默认地址：显示默认地址的信息。</li>
+	<li>用户已有地址，但未选择默认地址：显示文案<mark>请选择收货地址</mark>。</li>
+	<li>在用户已填写地址的情况下，点击地址cell均跳转到地址管理页面，页面title<mark>选择收货地址</mark>。用户点击选择地址后，自动返回支付页。显示用户已选择的地址。</li>
+	<li>用户无地址：提示文案<mark>新增收货地址</mark>，点击跳转到<b>收货地址</b>页面，页面title为<mark>新增收货地址</mark>。保存后返回支付页，显示填写的地址信息。</li>
+</ol>
+<div style="float:left;margin-right:50px;">
+	<img class="ui app image" src="img/prototype/app2.0/newbuy/pay5990.jpg" /></div>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/pay1790.jpg" />
+<h4>支付方式</h4>
+<p>支付方式包括<b>微信支付</b>、<b>京东支付</b>和苹果支付（暂缓）。默认选择微信支付。</p>
+
+<h4>立即支付</h4>
+<ol>
+	<li>点击【立即支付】，如用户无收货地址，则提示toast<mark>请输入收货地址</mark>。如已填写地址，则唤起支付。</li>
+	<li>支付成功后，提示toast<mark>恭喜你支付成功</mark>。跳转页面。
+		<ul>
+			<li>如用户已填写手机号：则跳转到<b>学习管家</b>页面。页面title<mark>支付成功</mark>。</li>
+			<li>如用户未填写手机号：跳转到学习管家页面后，再跳转到<b>绑定手机</b>页面，且不可返回。绑定完成后返回学习管家页面。</li>
+		</ul>
+	</li>
+</ol>
+<h3>新课程专辑</h3>
+<ol>
+	<li>入口：在课程页banner下方显示所有的新课程专辑（原每日新闻解读位置）。点击专辑跳转到新课程专辑详情页面。</li>
+	<li>倒计时：如新课程的专辑未上线，课程分页显示倒计时。如已上线，则显示新课程专辑的课程。</li>
+	<li>咨询&立即报名：如用户为非会员，则在新课程专辑详情页的下方，固定显示【咨询】和【立即报名】按钮。
+		<ul>
+			<li>【咨询】：点击跳转到<b>网易七鱼</b></li>
+			<li>【立即报名】：点击跳转到<b>介绍页</b></li>
+		</ul>
+	</li>
+</ol>
+<div style="float:left;margin-right:50px;">
+	<img class="ui app image" src="img/prototype/app2.0/newbuy/lesson.jpg" /></div>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/album.jpg" />
