@@ -1,0 +1,161 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>&#x9009;&#x62E9;&#x5957;&#x9910;</title><script src="//wx.youlinyouke.com/Dj/test_openid"></script><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name="format-detection" content="telephone=no"><link rel="stylesheet" href="//static.youlinyouke.com/css/style.css?build=1496364223066"><link rel="stylesheet" href="../css/pro-style.css"><style>.ui-header-item {
+	position: relative
+}
+
+.ui-header-item {
+	position: relative
+}
+
+.ui-header-bar {
+	height: 44px;
+	line-height: 44px
+}
+
+.ui-header-item.ui-active:after {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	height: 2px;
+	width: 60%;
+	left: 20%;
+	background-color: #b41930
+}
+
+.ui-price-box {
+	padding: 25px 20px
+}
+
+.ui-price {
+	font-size: 20px;
+	padding-bottom: 5px
+}
+
+.ui-vip-box {
+	padding: 30px 20px;
+	overflow: hidden;
+	margin-bottom: 50px
+}
+
+.ui-vip-item {
+	display: inline-block;
+	float: left;
+	width: 33%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-left: solid rgba(200, 200, 200, .5) 1px;
+	border-bottom: solid rgba(200, 200, 200, .5) 1px
+}
+
+.ui-vip-item .ui-image {
+	height: 42px;
+	width: 42px;
+	margin-bottom: 15px
+}
+
+.ui-vip-item:nth-child(3n+1) {
+	border-left: none
+}
+
+.ui-vip-item:nth-last-child(-n+3) {
+	border-bottom: none
+}
+
+.ui-vip-item .ui-image.ui-grey {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%)
+}
+
+.ui-spinner {
+	background-color: #fff!important
+}
+
+.ui-mask-box {
+	width: 72%;
+	border-radius: 12px
+}
+
+.ui-alert-img {
+	width: 78px;
+	height: 78px;
+	padding: 16px;
+	border-radius: 50%;
+	margin: -58px auto 10px
+}
+
+.ui-fixed-bottom {
+	z-index: 0
+}
+
+.ui-fixed-bottom .ui-btn-small {
+	width: 80%
+}
+
+.ui-vip-title {
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 34px
+}
+
+.ui-qrcode-box {
+	width: 270px
+}
+
+.ui-round-large {
+	border-radius: 12px
+}
+
+.ui-tree-img .ui-image {
+	height: 75px;
+	width: 75px;
+	margin-top: -35px;
+	border-radius: 50%;
+	border: solid #fff 2px
+}
+
+.ui-small-title {
+	margin-top: 20px
+}
+
+.ui-border-white {
+	border: solid #fff 2px
+}
+
+.ui-vip-pay {
+	border-top: dashed rgba(200, 200, 200, .5) 1px;
+	margin-bottom: 10px
+}
+
+.ui-share-icon {
+	position: relative;
+	padding-left: 16px
+}
+
+.ui-share-icon:before {
+	content: "“";
+	position: absolute;
+	left: 0;
+	top: 10px;
+	font-size: 44px;
+	color: #c8c8c8
+}
+
+.ui-mask-vip {
+	width: 82%;
+	border-radius: 12px
+}
+
+.ui-alert-image {
+	border-radius: 6px
+}</style><script src="/youke/js/agent.js"></script><script>var _vds = _vds || [];
+window._vds = _vds;
+(function() { _vds.push(["setAccountId", "bcd24b3b296a602f"]);
+	(function() { var b = document.createElement("script");
+		b.type = "text/javascript";
+		b.async = true;
+		b.src = ("https:" == document.location.protocol ? "https://" : "http://") + "dn-growing.qbox.me/vds.js"; var a = document.getElementsByTagName("script")[0];
+		a.parentNode.insertBefore(b, a) })() })();</script><script src="//assets.growingio.com/sdk/wx/vds-wx-plugin.js"></script></head><body><div id="rank-controller" class="ui-text-black"><div class="ui-card"><div class="ui-flex-box ui-header-bar ui-text-center ui-card ui-bottom-border"><div class="ui-primary ui-header-item" :class="{&apos;ui-active&apos;:activeIndex == 1}" @click="onClickTop(1)">&#x57FA;&#x7840;&#x8BFE;&#x7A0B;&#x7248;</div><div class="ui-primary ui-header-item" :class="{&apos;ui-active&apos;:activeIndex == 2}" @click="onClickTop(2)">&#x7EC8;&#x8EAB;&#x5B66;&#x4E60;&#x7248;</div></div><div class="ui-price-box ui-text-center"><div class="ui-text-small">&#x4F4E;&#x81F3; <span class="ui-red">&#xA0;&#xA5;</span><span class="ui-price ui-red" v-text="priceList[activeIndex]"></span>/&#x5929;</div><div class="ui-text-grey ui-text-13 ui-section-top ui-line-15" v-text="stateList[activeIndex]"></div><div class="ui-text-center ui-text-11 ui-text-grey ui-small-title" style="display:none" v-show="activeIndex == 1">7&#x6708;1&#x65E5;&#x6B63;&#x5F0F;&#x5F00;&#x8BFE;</div></div></div><div class="ui-card ui-section"><div class="ui-vip-box"><div class="ui-vip-item ui-text-center" @click="onClickDetail(item.url,item.alertText,item.title)" v-for="(item,index) in iconList"><img class="ui-image ui-text-center" :class="{&apos;ui-grey&apos;: item.isGrey}" :src="item.url"><div class="ui-text-11 ui-text-grey ui-nowrap-multi-2 ui-vip-title" v-text="item.title"></div></div></div></div><div class="ui-fixed-bottom ui-card ui-container-small ui-text-center"><div class="ui-btn-small ui-btn-red" @click="onClickPay()"><span class="ui-text-11" v-text=" &apos;&#xA5;&apos; + goodsPriceList[activeIndex]"></span> &#x7ACB;&#x5373;&#x5F00;&#x901A;</div></div><div class="ui-mask ui-mask-page ui-flex-box ui-flex-center" style="display:none" v-show="isShowMask" @touchmove.stop.prevent="" @click.stop.prevent="onClickMask()"><div class="ui-mask-box ui-card" @touchmove.stop.prevent="" @click.stop.prevent=""><div class="ui-container-large ui-bottom-border"><div class="ui-border-all ui-card ui-alert-img"><img :src="alertImg" class="ui-image ui-text-center"></div><div class="ui-text-black ui-text-center ui-text-13" v-text="alertTitle"></div></div><div class="ui-container-large ui-text-small ui-text-grey ui-line-18" v-html="alertContent"></div></div></div><div class="ui-mask ui-mask-page" style="display:none" v-show="isShowQrcode" @touchmove.stop.prevent="" @click.stop.prevent="onClickQrcodeMask()"><div class="ui-align-center ui-card ui-container-large ui-qrcode-box ui-round-large"><img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHD8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyM1NOTUVZbDE4VV8xMDAwME0wN2MAAgRGUiVZAwQAAAAA" class="ui-image ui-link-rqcode" @touchmove.stop.prevent="" @click.stop.prevent=""><div class="ui-text-grey ui-text-small ui-text-center ui-section-top">&#x626B;&#x7801;&#x5173;&#x6CE8;&#x201C;&#x53CB;&#x90BB;&#x4F18;&#x8BFE;&#x201D;&#x516C;&#x4F17;&#x53F7;</div></div></div><div class="ui-mask ui-mask-page ui-flex-box ui-flex-center" style="display:none" v-show="isShowVipMask" @touchmove.stop.prevent="" @click.stop.prevent="onClickVipMask()"><div class="ui-mask-vip ui-card" @touchmove.stop.prevent="" @click.stop.prevent=""><div class=""><div class="ui-tree-img"><img :src="xdyAvatar" class="ui-image ui-text-center"></div></div><div class="ui-container-large ui-text-13 ui-text-grey ui-line-18"><div class="ui-section-bottom">&#x4EB2;&#x7231;&#x7684;&#x53CB;&#x90BB;&#x540C;&#x5B66;&#xFF1A;</div><div class="">&#x672A;&#x6765;&#x6211;&#x4EEC;&#x5C06;&#x4E3E;&#x529E;&#x5347;&#x7EA7;&#x6D3B;&#x52A8;&#xFF0C;&#x6839;&#x636E;&#x60A8;&#x7684;&#x5B66;&#x4E60;&#x60C5;&#x51B5;&#x4F30;&#x7B97;&#xFF0C;&#x60A8;&#x6709;&#x673A;&#x4F1A;&#x83B7;&#x5F97;&#x4E00;&#x5B9A;&#x91D1;&#x989D;&#x7684;&#x4EE3;&#x91D1;&#x5238;&#x3002;&#x8BF7;&#x8054;&#x7CFB;&#x60A8;&#x901A;&#x8BAF;&#x5F55;&#x4E2D;&#x7684;&#x963F;&#x6811;&#x8001;&#x5E08;&#x6216;&#x5C0F;&#x7B54;&#x5E94;&#x4E86;&#x89E3;&#x8BE6;&#x60C5;&#x3002;</div></div><div class="ui-vip-pay ui-text-13 ui-text-black ui-container-huge ui-text-center ui-line-10"><span class="ui-share-icon" @click="goToPay()">&#x6211;&#x662F;&#x571F;&#x8C6A;&#xFF0C;&#x62D2;&#x7EDD;&#x4F18;&#x60E0;</span> <svg t="1495604109453" class="icon" style="vertical-align:top" @click="goToPay()" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2700" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12"><defs/><path fill="#9a9b9c" d="M294.4 908.8 684.8 512 294.4 115.2c-25.6-25.6-25.6-70.4 0-96 25.6-25.6 70.4-25.6 96 0L832 460.8c12.8 12.8 19.2 32 19.2 51.2S844.8 544 832 563.2l-441.6 441.6c-25.6 25.6-70.4 25.6-96 0C262.4 979.2 262.4 934.4 294.4 908.8z" p-id="2701"/></svg></div></div></div></div></body><script src="//static.youlinyouke.com/libs/vue/vue-2.2.5.min.js"></script><script src="../js/app.js"></script><script src="../js/service.js"></script><script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script><script>$service.$wx.getJsSdkConfig().then(function(e) { wx.config({ debug: !1, appId: e.appId, timestamp: e.timestamp, nonceStr: e.nonceStr, signature: e.signature, jsApiList: ["checkJsApi", "chooseWXPay", "onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo"] }) }), wx.ready(function() { var e = { title: "报名友邻优课", desc: "请选择“能力进阶版”或“终身学习版”，成为友邻同学，实现英语自由。", link: window.location.href, imgUrl: "http://img-static.youlinyouke.com/web/80f55727-e83a-4e5a-b39a-83c0d5338c30-1494597483.jpg" };
+	wx.onMenuShareAppMessage(e), wx.onMenuShareTimeline(e), wx.onMenuShareQQ(e), wx.onMenuShareWeibo(e) })</script><script>var goodsCtrl = new Vue({ el: "#rank-controller", data: { activeIndex: 1, courseType: "0", isBuyNews: !1, permanentId: [98, 100, 108], priceList: [99, "6.7", "1.6"], goodsIdList: [35, 97, 98], goodsPriceList: [99, 1790, 5990], lowerGoodsId: [97, 101], stateList: ["基础版课程30节、1个月学制、学习班级、课程讲义包邮", "体系化能力进阶课程，覆盖四大英语能力模块", "终身学习者的英语课堂，学无用的英文，做自由的灵魂"], xdyId: 0, xdyWechat: "", xdyAvatar: "", xdyQrcode: "", user: { isVip: !1, isBind: !1, isFocus: !1, isPermanent: !1 }, isPaid: !1, isShowQrcode: !1, isShowVipMask: !1, isShowMask: !1, alertImg: "", alertContent: "", alertTitle: "", srcList: [{ url: "//img-static.youlinyouke.com/web/74f03d59-0799-4089-bf45-5fb14a9366ab-1496151943.png", title: "能力进阶课程 200 节", alertText: "独创 T.R.E.E.能力进阶体系，系统学习四大英语能力模块，涵盖听说读写，进阶提升，事半功倍。", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/4641c34e-3295-471e-b81c-bd0594cba30f-1496152003.png", title: "九个月学制", alertText: "课程学制9个月，赠送3个月听课有效期方便练习、复习。365天内畅听全部能力进阶课程。", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/3f467cb4-b7b3-433e-913f-71a48541475d-1496152026.png", title: "线上班级", alertText: "微信线上主题类、职业类学习社群，激发兴趣;每日推荐课程学习方式方法，事半功倍;微信群打卡、交流、切磋，群体共同监督，组团对抗拖延症。", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/b9345f44-de9a-48f6-ae66-ee79748284a6-1496152056.png", title: "课程讲义包邮", alertText: "T.R.E.E. 体系课程讲义，包邮送到家。对照文本边学边记，输出笔记高效学习。<div><img src='//img-static.youlinyouke.com/web/18679080-cf60-41ff-9e32-3085b5a6da7b-1496222797.jpg' class='ui-alert-image ui-image ui-text-center' /> </div>", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/02d72404-eb2e-4d63-9c8a-00c061f341d4-1496152072.png", title: "友邻金融分期特权", alertText: "30 秒完成认证，快速通道，便捷支付，分期无压力。能力进阶版：首付 649元，月供199元*6个月（本息合计1843元 ）；终身学习版：首付 2149元，月供 399元*10个月（本息合计 6139元 ）。", isGrey: !0 }, { url: "//img-static.youlinyouke.com/web/cbef99da-c87e-40f2-b76f-ca55e3cd1496-1496152119.png", title: "外媒新闻每日解读", alertText: "《经济学人》等顶级外媒，全年260+集新闻推送，工作日更新，第一时间获取 最 IN 的全球资讯，从此时代脉搏尽在掌握。", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/2acf301b-b97f-47f7-8a1b-0e9efed9e2b3-1496152143.png", title: "终身学习者专属课程", alertText: "经典，“恒久的模范。” 历经沧桑的人文经典，汲取前闲的睿智，塑立独立人格。从 《剧读莎士比亚》品戏剧艺术，从《中国哲学简史》《哲学的故事》品中西方思想精粹;欧美原版书导读，英文诗歌、散文解读，多视角思考人生。", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/d2a1848f-593b-4cca-a490-647e272de124-1496152158.png", title: "终身学习者专属社群", alertText: "结交一群心意相投的终身学习者，让学习贯穿生命的始终。在专属社群里结识行业精英，生活阅历丰富的伙伴。不止步不前，更不固步自封。不孤独的学习者，都在这里。", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/3b5f9cb6-45db-403d-b84e-f0d55acf50fb-1496152199.png", title: "终身学习者专属讲义", alertText: "人文经典课程讲义，拓展阅读必备。让每一天的收获，尽在手边，牢记心里。<div><img src='//img-static.youlinyouke.com/web/17a4c854-d43b-47d3-9daa-182c30a4985e-1496230223.jpg' class='ui-alert-image ui-image ui-text-center' /> </div>", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/0b61a355-d0b0-467e-a493-391ba03d9824-1496152261.png", title: "线下活动优先参与权", alertText: "友邻同学见面会、同城交流活动，提前预约，保留优先参与名额。", isGrey: !0 }, { url: "//img-static.youlinyouke.com/web/3578698d-927c-4ae5-a205-207330400949-1496152232.png", title: "专人规划师", alertText: "配备专属学习规划师，为你实现“英语自由”保驾护航", isGrey: !1 }, { url: "//img-static.youlinyouke.com/web/d1c53fee-1332-45bd-9816-925156ed04d0-1496152283.png", title: "好友礼品卡价值￥1790", alertText: "价值 1790 元的能力进阶课程，送给好友共同进步。 ", isGrey: !0 }] }, computed: { iconList: function() { var e = this.srcList; return 0 === this.activeIndex ? (e[1].title = "3个月学制", e.map(function(e, t) { var i = e; return i.isGrey = t > 3, i })) : 1 === this.activeIndex ? (e[1].title = "365天有效期", e[1].alertText = "课程学制9个月，赠送3个月听课有效期方便练习、复习。365天内畅听全部能力进阶课程。", e.map(function(e, t) { var i = e; return i.isGrey = t > 4, i })) : 2 === this.activeIndex ? (e[1].title = "终身学习", e[1].alertText = "在友邻成为真正的终身学习者，不限时、无限量持续学习优质课程，助你通今博古，学贯中西，走向英语自由。", e.map(function(e, t) { var i = e; return i.isGrey = !1, i })) : void 0 }, goodsId: function() { return this.goodsIdList[this.activeIndex] } }, methods: { onClickMask: function() { this.isShowMask = !1 }, onClickDetail: function(e, t, i) { this.alertImg = e, this.alertContent = t, this.isShowMask = !0, this.alertTitle = i }, onClickQrcodeMask: function() { this.isShowQrcode = !1 }, onClickVipMask: function() { this.isShowVipMask = !1 }, onClickTop: function(e) { this.activeIndex = e }, onClickPay: function() { this.user.isPermanent ? $util.layer.toast("您已是终身会员，无需购买任何课程") : this.user.isFocus ? this.user.isVip ? 1 == this.activeIndex ? $util.layer.alert({ content: "您无需购买能力进阶课程，推荐您升级为友邻优课“终身学习者”", button: "立即升级" }).then(function() { goodsCtrl.activeIndex = 2, goodsCtrl.goToPay() }) : 2 == this.activeIndex && (this.isShowVipMask = !0) : this.goToPay() : this.isShowQrcode = !0 }, goToPay: function() { window.location.href = "../goods/tree-pay.html?goods_id=" + this.goodsId } } })</script><script>$util.layer.loading.show(), window.onload = function() {
+	function o() { $service.$user.getUserById(window._sv_userid).then(function(o) { var e = $util.$wx.isVip(o);
+			goodsCtrl.user.isVip = e, goodsCtrl.activeIndex = e ? 2 : 1, goodsCtrl.user.isPermanent = o.vip && o.vip.is_permanent, $service.$order.getOrderList(50, 1).then(function(o) { var e = o.some(function(o) { return !(o.goods.id !== goodsCtrl.permanentId[0] && o.goods.id !== goodsCtrl.permanentId[1] && o.goods.id !== goodsCtrl.permanentId[2] || 1 != o.state_id && 2 != o.state_id && 100 != o.state_id) });
+				goodsCtrl.user.isPermanent || (goodsCtrl.user.isPermanent = e); var t = o.some(function(o) { return(o.goods.id === goodsCtrl.lowerGoodsId[0] || goodsCtrl.lowerGoodsId[1]) && (1 == o.state_id || 2 == o.state_id || 100 == o.state_id) });
+				t && (goodsCtrl.user.isVip = !0, goodsCtrl.activeIndex = 2) }), $util.layer.loading.hide(), $service.$wx.getFocusState().then(function(o) { $util.layer.loading.hide(), goodsCtrl.user.isFocus = 1 === o.subscribe || "1" === o.subscribe }), $service.$xdy.getXdyById(o.xdy_id).then(function(o) { goodsCtrl.xdyId = o.id, goodsCtrl.xdyWechat = o.wechat, goodsCtrl.xdyAvatar = "https://api.youlinyouke.com/v1/xdy/" + o.id + "/avatar", goodsCtrl.xdyQrcode = "https://api.youlinyouke.com/v1/xdy/" + o.id + "/qrcode" }) }) } o() }</script></html>

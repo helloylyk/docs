@@ -2,8 +2,61 @@
 <h2>新课程体系</h2>
 <h3>概述</h3>
 <p>友邻优课在2017年5月战略方向调整后对课程进行了重新梳理，新体系将英语学习从口语发音的基本功到英语自由划分为9个部分，帮助英语学习者通过品读世界经典素材（图书、新闻、诗歌等）真正提升英语能力，实现英语自由。</p>
+<h3>新会员体系介绍</h3>
+<table class="ui center aligned celled table">
+	<thead>
+		<tr>
+			<th>用户身份</th>
+			<th>价格</th>
+			<th>专辑的收听权限</th>
+			<th>收听非权限内课程提示</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>免费用户</td>
+			<td>/</td>
+			<td>免费专辑</td>
+			<td>“该课程仅限友邻学员收听” 立即入学 咨询阿树老师 取消</td>
+		</tr>
+		<tr>
+			<td>基础课程版套餐</td>
+			<td>¥1790/年</td>
+			<td>TREE专辑</td>
+			<td>“收听此课程需升级终身会员或购买日益精进版套餐” 立即升级 取消<br />
+			“收听此课程需升级终身会员” 立即升级 取消</td>
+		</tr>
+		<tr>
+			<td>日益精进版套餐</td>
+			<td>¥2390/年</td>
+			<td>每日新闻专辑</td>
+			<td>“收听此课程需升级终身会员或购买基础课程版套餐” 立即升级 取消<br />
+			“收听此课程需升级终身会员” 立即升级 咨询阿树老师 取消</td>
+		</tr>
+		<tr>
+			<td>终身会员</td>
+			<td>¥5990/年</td>
+			<td>已知的所有专辑</td>
+			<td>/</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>同学权益页面修改</h4>
+<ol>
+	<li>显示【套餐名称】【到期时间】。在用户只有一个套餐时，用例如下：<ol>
+		<li>终身会员：“您是尊贵的终身会员”</li>
+		<li>日益精进版:“日益精进版 到期时间：xxxx-xx-xx”</li>
+		<li>基础课程版:“基础课程版 到期时间：xxxx-xx-xx”</li>
+	</ol></li>
+	<li>在用户同时有多个套餐时，规则如下：<ol>
+		<li>当套餐里有终身会员时，始终显示为“您是尊贵的终身会员”，并隐藏升级入口。</li>
+		<li>未购买终身会员，但同时有日益精进和基础课程时，显示：<br />日益精进版  到期时间：xxxx-xx-xx<br />基础课程版 到期时间：xxxx-xx-xx。【立即升级】</li>
+	</ol></li>
+</ol>
+
 <h3>购买流程</h3>
-<img class="ui app image" style="height: 300px;"src="img/prototype/app2.0/buyflow.png" />
+<img class="ui app image" style="height: 300px;" src="img/prototype/app2.0/buyflow.png" />
 <h3>购买入口</h3>
 <table class="ui center aligned celled table">
 	<thead>
@@ -16,12 +69,12 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>非会员【立即入学】按钮</td>
+			<td>免费用户【立即入学】按钮</td>
 			<td>
 				<a href="javascript:a('9_4');">介绍页</a>
 			</td>
 			<td>非会员</td>
-			<td>非学员点击课程及其他需要会员资格的地方，提示alert按钮【立即入学】、【咨询阿树老师】、【取消】。点击【立即入学】跳转介绍页。</td>
+			<td>非学员点击课程及其他需要会员资格的地方，提示【立即入学】、【咨询阿树老师】、【取消】。点击【立即入学】跳转介绍页。</td>
 		</tr>
 		<tr>
 			<td>课程页banner</td>
@@ -29,7 +82,7 @@
 				<a href="javascript:a('9_4');">介绍页</a>
 			</td>
 			<td>非会员</td>
-			<td>该banner仅对非会员展示。</td>
+			<td>banner仅对免费用户显示。</td>
 		</tr>
 		<tr>
 			<td>专辑页【立即报名】</td>
@@ -37,7 +90,11 @@
 				<a href="javascript:a('9_5');">选择套餐页</a>
 			</td>
 			<td>非会员</td>
-			<td>对于非会员，所有专辑页底部均固定显示【咨询阿树老师】&【立即报名按钮】按钮。如是会员，则不显示。</td>
+			<td>对于免费用户，所有专辑页底部均固定显示【咨询阿树老师】&【立即报名按钮】按钮。如是会员，则不显示。</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>学员非终身会员</td>
 		</tr>
 		<tr>
 			<td>同学权益页【立即升级】</td>
@@ -69,73 +126,163 @@
 <img class="ui app image" src="img/prototype/app2.0/newbuy/introduce1.jpg">
 <h4>课程</h4>
 <p>课程页展示tree课程体系。</p>
-<img class="ui app image" src="img/prototype/app2.0/newbuy/introduce2.jpg"
-<ol>
-	<li>试听：点击则跳转到播放页，播放固定课程。
-		<table class="ui center aligned celled structured table">
-			<thead>
-				<tr>
-					<th class="one wide">课程名</th>
-					<th class="one wide">id</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>\</th>
-					<th>\</th>
-				</tr>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/introduce2.jpg"> <ol>
+<li>试听：点击则跳转到播放页，播放固定课程。
+	<table class="ui center aligned celled structured table">
+		<thead>
+			<tr>
+				<th class="one wide">课程名</th>
+				<th class="one wide">id</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>\</th>
+				<th>\</th>
+			</tr>
 
-			</tbody>
-		</table>
-	</li>
-	<li>专辑：点击跳转到对应的专辑详情页面。</li>
-	<li>老师头像：点击跳转到对应的老师介绍页。</li>
+		</tbody>
+	</table>
+</li>
+<li>专辑：点击跳转到对应的专辑详情页面。</li>
+<li>老师头像：点击跳转到对应的老师介绍页。</li>
 </ol>
 <h3>选择套餐</h3>
 <ol>
 	<li>套餐分为<b>每日新闻版</b>、<b>基础课程版</b>和<b>终身学习版</b>，<b style="color: red;">跳转该页面始终默认打开终身学习版</b>。</li>
 	<li>【立即开通】：固定显示于选择套餐页底部，点击跳转到已选择套餐的<b>支付页</b></li>
 </ol>
-<table class="ui center aligned celled table">
-	<thead>
-		<tr>
-			<th></th>
-			<th>每日新闻版</th>
-			<th>能力进阶版</th>
-			<th>终身学习版</th>
-		</tr>
-	</thead>
-	<tr>
-		<td>权益</td>
-		<td>每日新闻专辑++365天有效期+线上班级+友邻金融分期特权/td>
-		<td>能力进阶课程200节+365天有效期+线上班级+讲义班包邮+友邻金融分期特权</td>
-		<td>基础课程版权益+外媒新闻每日解读+终身学习者专属课+终身学习者专属社群+终身学习者专属讲义+线下活动优先参与权+专人规划师+好友礼品卡价值¥1790</td>
-	</tr>
-
-</table>
-<p>点击权益则弹窗显示权益的具体内容。</p>
 <div style="float:left;margin-right:50px;">
 	<img class="ui app image" src="img/prototype/app2.0/newbuy/zhongshenq.jpg" /></div>
 <img class="ui app image" src="img/prototype/app2.0/newbuy/jichuq.jpg" />
 
-<h4>每日新闻版</h4>
-<p>pending...</p>
-<h4>基础课程版</h4>
-
-<p>若用户是<b>未购买终身学习版的会员</b>，则当其选择基础课程版和每日新闻版时，提示alert<mark>您无需购买~，推荐您升级为友邻优课终身学习者。</mark> <mark>立即升级</mark>。</p>
+<p>点击权益则弹窗显示权益的具体内容。权益文案如下：</p>
+<table class="ui center aligned celled structured table">
+	<thead>
+		<tr>
+			<th class="one wide">套餐&一句话介绍</th>
+			<th class="one wide">权益名</th>
+			<th class="three wide">权益内容</th>
+		</tr>
+	</thead>
+	<tr>
+		<td rowspan="4"><b>日益精进版</b><br />第一时间解读顶尖外媒最IN资讯，熟谙全球最热话题，学习地道英文表达</td>
+		<td>外媒新闻第一时间解读</td>
+		<td>同终身会员</td>
+	</tr>
+	<tr>
+		<td>365天有效期</td>
+		<td>365天内琢磨赏析外媒新闻解读，整年时间精听、阅读、复习，磨练国际视野，不经意间学好英语。</td>
+	</tr>
+	<tr>
+		<td>线上班级</td>
+		<td>同终身会员</td>
+	</tr>
+	<tr>
+		<td>友邻金融分期特权</td>
+		<td>同终身会员</td>
+	</tr>
+	<tr>
+		<td rowspan="5"><b>基础课程版</b><br />体系化能力进阶课程，覆盖四大英语能力模块</td>
+		<td>能力进阶课程200节</td>
+		<td>同终身会员</td>
+	</tr>
+	<tr>
+		<td>365天有效期</td>
+		<td>课程学制9个月，赠送3个月听课有效期方便练习、复习。365天内畅听全部能力进阶课程。</td>
+	</tr>
+	<tr>
+		<td>线上班级</td>
+		<td>同终身会员</td>
+	</tr>
+	<tr>
+		<td>课程讲义包邮</td>
+		<td>同终身会员</td>
+	</tr>
+	<tr>
+		<td>友邻金融分期特权</td>
+		<td>同终身会员</td>
+	</tr>
+	<tr>
+		<td rowspan="12"><b>终身会员版</b><br />终身学习者的英语课堂，学无用的英文，做自由的灵魂</td>
+		<td>能力进阶课程200节</td>
+		<td>独创 T.R.E.E.能力进阶体系，系统学习四大英语能力模块，涵盖听说读写，进阶提升，事半功倍。</td>
+	</tr>
+	<tr>
+		<td>终身学习</td>
+		<td>在友邻成为真正的终身学习者，不限时、无限量持续学习优质课程，助你通今博古，学贯中西，走向英语自由。</td>
+	</tr>
+	<tr>
+		<td>线上班级</td>
+		<td>微信线上主题类、职业类学习社群，激发兴趣;每日推荐课程学习方式方法，事半功倍;微信群打卡、交流、切磋，群体共同监督，组团对抗拖延症。</td>
+	</tr>
+	<tr>
+		<td>课程讲义包邮</td>
+		<td>T.R.E.E. 体系课程讲义，包邮送到家。对照文本边学边记，输出笔记高效学习。[pic]</td>
+	</tr>
+	<tr>
+		<td>友邻金融分期特权</td>
+		<td>0 秒完成认证，快速通道，便捷支付，分期无压力。能力进阶版：首付 649元，月供199元*6个月（本息合计1843元 ）；终身学习版：首付 2149元，月供 399元*10个月（本息合计 6139元 ）</td>
+	</tr>
+	<tr>
+		<td>外媒新闻每日解读</td>
+		<td>精选《经济学人》等顶级外媒最新资讯，全年230+集新闻推送，网罗时政、商业、科创、文化、娱乐话题，与世界同步的同时，学地道英语。</td>
+	</tr>
+	<tr>
+		<td>终身学习者专属课程</td>
+		<td>经典，“恒久的模范。” 历经沧桑的人文经典，汲取前闲的睿智，塑立独立人格。从 《剧读莎士比亚》品戏剧艺术，从《中国哲学简史》《哲学的故事》品中西方思想精粹;欧美原版书导读，英文诗歌、散文解读，多视角思考人生。</td>
+	</tr>
+	<tr>
+		<td>终身学习者专属社群</td>
+		<td>结交一群心意相投的终身学习者，让学习贯穿生命的始终。在专属社群里结识行业精英，生活阅历丰富的伙伴。不止步不前，更不固步自封。不孤独的学习者，都在这里。</td>
+	</tr>
+	<tr>
+		<td>终身学习者专属讲义</td>
+		<td>人文经典课程讲义，拓展阅读必备。让每一天的收获，尽在手边，牢记心里。[pic]</td>
+	</tr>
+	<tr>
+		<td>线下活动优先参与权</td>
+		<td>友邻同学见面会、同城交流活动，提前预约，保留优先参与名额。</td>
+	</tr>
+	<tr>
+		<td>专人规划师</td>
+		<td>配备专属学习规划师，为你实现“英语自由”保驾护航。</td>
+	</tr>
+	<tr>
+		<td>好友礼品卡价值¥1790</td>
+		<td>价值 1790 元的能力进阶课程，送给好友共同进步。</td>
+	</tr>
+</table>
+<h3>销售引导路径</h3>
+<p>注：流程图及文案中1198指代已有会员、1790指代基础课程版会员、2390指代日益精进版会员、5990指代终身会员。</p>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/sell.jpg" />
+<p>路径涉及到的文案如下</p>
+<table class="ui center aligned celled structured table">
+	<thead>
+		<tr>
+			<th class="one wide">路径</th>
+			<th class="three wide">提示文案</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1198会员开通1790时</td>
+			<td>您无需购买基础课程版。未来我们将举办升级活动。根据您在友邻优课的学习情况估算，您有机会获得一定金额的代金券。请联系您通讯录中的阿树老师或小答应了解详情。<b>我是土豪，拒绝优惠</b> <b>去咨询阿树老师</b></td>
+		</tr>
+	</tbody>
+<!--<p>若用户是<b>未购买终身学习版的会员</b>，则当其选择基础课程版和每日新闻版时，提示alert<mark></mark> <mark>立即升级</mark>。</p>
 <img class="ui app image" src="img/prototype/app2.0/newbuy/jichu.jpg" />
 
 <h4>终身学习版</h4>
 
 <p>当会员选择终身学习版并点击【立即开通】时，提示文案如下：</p>
-	<mark>亲爱的友邻同学：</mark><br />
-	<mark>未来我们将举办升级活动。根据您在友邻优课的学习情况估算，您有机会获得一定金额的代金券。请联系您通讯录中的阿树老师或小答应了解详情。</mark><br /><br />
-	<mark><b>我是土豪，拒绝优惠</b> <b>去咨询阿树老师</b></mark><br />
-	<ul>
-		<li>【我是土豪，拒绝优惠】:点击跳转到对应套餐的支付页。</li>
-		<li>【去咨询阿树老师】：点击跳转到微信。</li>
-	</ul>
-<img class="ui app image" src="img/prototype/app2.0/newbuy/zhongshen.jpg" />
+<mark>未来我们将举办升级活动。根据您在友邻优课的学习情况估算，您有机会获得一定金额的代金券。请联系您通讯录中的阿树老师或小答应了解详情。</mark><br /><br />
+<mark></mark><br />
+<ul>
+	<li>【我是土豪，拒绝优惠】:点击跳转到对应套餐的支付页。</li>
+	<li>【去咨询阿树老师】：点击跳转到微信。</li>
+</ul>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/zhongshen.jpg" />-->
 <h3>支付页</h3>
 <p>支付页显示要购买的套餐信息。用户需选择收货地址和支付方式。</p>
 <table class="ui center aligned celled structured table">
@@ -156,13 +303,13 @@
 			<td>友邻优课基础课程版</td>
 			<td>一年</td>
 			<td>1790</td>
-		</tr>	
+		</tr>
 	</tbody>
 </table>
 
 <h4>选择地址</h4>
 <p>选择地址流程如下</p>
-<img class="ui app image" style="height:400px"src="img/prototype/app2.0/newbuy/addressflow.jpg" />
+<img class="ui app image" style="height:400px" src="img/prototype/app2.0/newbuy/addressflow.jpg" />
 
 <p>地址cell需显示的地址信息包括：<b>收货人</b>、<b>联系电话</b>、<b>地址</b>（由地区和详细地址拼接得到）</p>
 <div style="float:left;margin-right:50px;">
@@ -172,10 +319,11 @@
 
 	<li>用户已有地址：显示默认地址的信息。</li>
 	<li>已填写地址情况下：点击地址cell跳转到地址管理页面。页面title<mark>选择收货地址</mark>。用户点击地址管理的地址可选择地址。选择后自动返回支付页。显示用户已选择的地址。</li>
-	<li>未填写地址情况下：地址cell显示：<br /><ol>
-		<li>终身会员：<mark>新增收货地址    填写地址可收到终身会员讲义+T.R.E.E课程讲义</mark></li>
-		<li>基础课程：<mark>新增收货地址    填写地址可收到T.R.E.E课程讲义</mark></li>
-	</ol>点击跳转到<b>收货地址</b>页面，页面title为<mark>新增收货地址</mark>。保存地址后返回支付页，显示填写的地址信息。</li>
+	<li>未填写地址情况下：地址cell显示：<br />
+		<ol>
+			<li>终身会员：<mark>新增收货地址    填写地址可收到终身会员讲义+T.R.E.E课程讲义</mark></li>
+			<li>基础课程：<mark>新增收货地址    填写地址可收到T.R.E.E课程讲义</mark></li>
+		</ol>点击跳转到<b>收货地址</b>页面，页面title为<mark>新增收货地址</mark>。保存地址后返回支付页，显示填写的地址信息。</li>
 </ol>
 
 <h4>支付方式</h4>
@@ -207,10 +355,10 @@
 </ol>
 <img class="ui app image" src="img/prototype/app2.0/newbuy/myfuka.jpg" />
 <h4>页面文案：</h4>
-	<mark>友邻优课终身会员副卡               价值1790元</mark><br />
-	<mark>副卡权益   200友邻优课基础课程 365天有效</mark><br />
-	<mark>激活码xxxxxxxxxxxxxxx</mark><br /><br />
-	<mark>打开微信，关注“友邻优课”公众号，点击个人中心->激活身份->输入16位激活码，即可完成激活</mark>
+<mark>友邻优课终身会员副卡               价值1790元</mark><br />
+<mark>副卡权益   200友邻优课基础课程 365天有效</mark><br />
+<mark>激活码xxxxxxxxxxxxxxx</mark><br /><br />
+<mark>打开微信，关注“友邻优课”公众号，点击个人中心->激活身份->输入16位激活码，即可完成激活</mark>
 <h3>新课程专辑</h3>
 <p>在课程页banner下方显示所有的新课程专辑（原每日新闻解读位置）。点击专辑跳转到新课程专辑详情页面。</p>
 <ol>
